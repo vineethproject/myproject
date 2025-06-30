@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Diagnosis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Diagnosis Page -->
+  <div id="diagnosis-page">
+    <h2>What is the condition of your plant?</h2>
+    <select id="soil-condition-select">
+      <option value="dry-soil">Dry Soil</option>
+    </select>
+
+    <h2>When do you water your plant?</h2>
+    <select id="watering-time-select">
+      <option value="morning">Morning</option>
+      <option value="evening">Evening</option>
+    </select>
+
+    <h2>Where is your plant placed?</h2>
+    <select id="placement-select">
+      <option value="sunlight">In Sunlight</option>
+      <option value="shaded">In Shaded Area</option>
+    </select>
+
+    <button onclick="goToTreatment()">Next</button>
+    <button onclick="goBackToHome()">Back</button>
+  </div>
+
+  <!-- Treatment Page -->
+  <div id="treatment-page" style="display: none;">
+    <h1 id="treatment-plant-name">Plant Treatment</h1>
+    <h2>Treatment:</h2>
+    <p id="treatment-details">Your treatment details will appear here.</p>
+    <p><strong>Watering Time:</strong> <span id="watering-time-display"></span></p>
+    <p><strong>Placement:</strong> <span id="placement-display"></span></p>
+    <button onclick="goBackToDiagnosis()">Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
